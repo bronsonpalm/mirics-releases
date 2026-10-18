@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="description" content="Set up Mirics on your iPhone with the Mac download helper, LocalDevVPN, and SideStore.">
+  <link rel="canonical" href="https://bronsonpalm.github.io/mirics-releases/">
+  <link rel="icon" href="icon.png" type="image/png">
+  <title>Set up Mirics</title>
+  <style>
+    :root{color-scheme:dark;font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#101511;color:#f4f5eb;--lime:#c7ed62;--muted:#bdc7b6;--line:#35432e}
+    *{box-sizing:border-box}body{max-width:760px;margin:0 auto;padding:36px 22px 60px}header{display:flex;align-items:center;gap:17px;margin-bottom:26px}header img{width:72px;height:72px;border-radius:18px}h1{font-size:32px;line-height:1.2;margin:0}header p{margin:5px 0 0;color:var(--muted)}p{margin:15px 0}a{color:var(--lime);text-underline-offset:3px}button,.button{font:inherit;cursor:pointer;border:0;border-radius:12px;background:var(--lime);color:#17210b;padding:12px 18px;font-weight:650;text-decoration:none;display:inline-block;line-height:1.4}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #e5ffb1;outline-offset:5px}button:disabled{opacity:.35;cursor:default}.secondary{background:#34412d;color:#edf3e8}.device-picker{display:flex;gap:8px;padding:5px;background:#1d261a;border:1px solid var(--line);border-radius:16px;width:fit-content;margin:0 0 20px}.device-picker button{background:transparent;color:var(--muted);padding:9px 18px}.device-picker button[aria-pressed="true"]{background:#37482b;color:#f0facd}main{border:1px solid var(--line);border-radius:23px;background:#1a2119;overflow:hidden}.progress{padding:22px 26px 0}.count{color:#becfa8;font-size:14px;margin:0 0 9px}.progress-track{height:4px;border-radius:5px;background:#35422f;overflow:hidden}.progress-fill{height:100%;background:var(--lime);transition:width .2s}.step{padding:20px 26px 0}.step h2{font-size:27px;line-height:1.25;margin:0 0 17px}.step h2:focus{outline:none}.eyebrow{color:#bfceaa;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 7px}.note{border-left:3px solid #819c49;padding-left:15px;color:#c8d3bd}.actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin:21px 0}ol,ul{padding-left:23px}li{margin:12px 0}details{border-top:1px solid var(--line);margin-top:20px;padding-top:17px}summary{cursor:pointer;font-weight:650;color:#e9f2df}details p,details li{color:#c7d1bd}code{background:#303c29;padding:2px 5px;border-radius:5px;font-size:.9em;overflow-wrap:anywhere}.address{overflow-wrap:anywhere;font-size:15px}.small{font-size:14px;color:var(--muted)}nav{display:flex;justify-content:space-between;gap:15px;padding:27px 26px}footer{color:#a6b59a;font-size:13px;padding:20px 3px 0}footer p{margin:8px 0}[hidden]{display:none!important}.flow{font-size:15px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#121a11;white-space:pre-line;color:#d8e8c7}.reset{padding:0;background:none;color:var(--lime);font-size:13px;font-weight:500;text-decoration:underline;text-underline-offset:3px}.pill{display:inline-block;color:#d4e7bc;border:1px solid #50633d;border-radius:100px;font-size:12px;padding:3px 9px;margin-bottom:10px}
+    @media(max-width:480px){body{padding:25px 16px 42px}h1{font-size:28px}header img{width:61px;height:61px;border-radius:15px}.step{padding:20px 20px 0}.progress{padding:20px 20px 0}nav{padding:25px 20px}.step h2{font-size:25px}.actions .button{width:100%;text-align:center}}
+    @media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
+  </style>
+</head>
+<body data-device="iphone">
+  <header><img src="icon.png" alt="Mirics" width="72" height="72"><div><h1>Set up Mirics</h1><p>One guide for your Mac and iPhone.</p></div></header>
+  <div class="device-picker" role="group" aria-label="Which device are you using?">
+    <button type="button" id="iphone" aria-pressed="true">On iPhone</button>
+    <button type="button" id="mac" aria-pressed="false">On Mac</button>
+  </div>
+  <main>
+    <div class="progress"><p class="count" id="count" aria-live="polite">Step 1 of 5</p><div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill" style="width:20%"></div></div></div>
+    <section class="step" data-step="0" aria-labelledby="heading-0">
+      <p class="eyebrow">Start on your Mac</p><h2 id="heading-0" tabindex="-1">Prepare the downloads</h2>
+      <p>You’ll need a Mac, an iPhone, a USB cable, Wi-Fi, and your own Apple Account for the first setup. If SideStore is already installed and refreshes successfully, continue to step 4.</p>
+      <div data-for="iphone">
+        <p>Open this same address on your Mac to download the setup helper:</p>
+        <p class="address"><a href="https://bronsonpalm.github.io/mirics-releases/">bronsonpalm.github.io/mirics-releases</a></p>
+        <p>Switch this guide to <strong>On Mac</strong> there. Keep this page open on your iPhone for the phone steps.</p>
+      </div>
+      <div data-for="mac" hidden>
+        <p>Download and unzip the Mac setup package. Keep its files together, then double-click <strong>Set up Mirics.command</strong>.</p>
+        <div class="actions"><a class="button" href="https://github.com/bronsonpalm/mirics-releases/releases/download/setup-v1/MiricsSetup.zip" rel="noreferrer">Download Mac setup</a></div>
+        <p>The helper downloads the latest Mirics app, checks its size and SHA-256 checksum, and opens the verified official installer, <strong>iloader</strong>. Finder highlights the verified <strong>Mirics.ipa</strong> as a fallback.</p>
+        <p class="small">The helper uses macOS tools. You don’t need Xcode or Python. It opens Terminal; sign in only inside iloader and SideStore.</p>
+      </div>
+      <p class="note">You approve Apple’s sign-in and security prompts yourself. The helper does not silently install phone apps or change your security settings.</p>
+      <details><summary>If the Mac helper won’t open</summary><p>Follow the <a href="https://docs.sidestore.io/docs/installation/install" rel="noreferrer">official SideStore installation guide</a> and get <a href="https://iloader.app/" rel="noreferrer">iloader from its official website</a>. Don’t disable your Mac’s security protections.</p></details>
+    </section>
+    <section class="step" data-step="1" aria-labelledby="heading-1" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-1" tabindex="-1">Get LocalDevVPN</h2>
+      <p>Install LocalDevVPN from the App Store. Open it, tap <strong>Connect</strong>, allow its VPN configuration, and confirm with your iPhone passcode.</p>
+      <div class="actions" data-for="iphone"><a class="button" href="https://apps.apple.com/app/localdevvpn/id6755608044" rel="noreferrer">Get LocalDevVPN</a><a href="localdevvpn://">Open LocalDevVPN</a></div>
+      <div data-for="mac" hidden><p>On the iPhone, open this setup page and choose <strong>On iPhone</strong> to use the App Store button.</p><p class="address">bronsonpalm.github.io/mirics-releases</p></div>
+      <p class="note">Connect your iPhone to Wi-Fi. LocalDevVPN is needed while SideStore installs, updates, or refreshes apps. You can disconnect it afterward.</p>
+      <p class="small">An Open button only asks the app to open. This page cannot check whether it is installed or whether the VPN is connected.</p>
+    </section>
+    <section class="step" data-step="2" aria-labelledby="heading-2" hidden>
+      <p class="eyebrow">Mac and iPhone</p><h2 id="heading-2" tabindex="-1">Set up SideStore</h2>
+      <ol>
+        <li>Connect your unlocked iPhone to the Mac with a cable. Tap <strong>Trust</strong> if asked.</li>
+        <li>In iloader on the Mac, sign in with your own Apple Account, select your iPhone, and choose <strong>Install SideStore (Stable)</strong>.</li>
+        <li>On iPhone, go to <strong>Settings → General → VPN &amp; Device Management</strong> and trust the developer entry for that Apple Account. If shown, choose <strong>Allow &amp; Restart</strong>, enter your passcode, and unlock the phone afterward.</li>
+        <li>Enable <strong>Settings → Privacy &amp; Security → Developer Mode</strong> if required. Restart and confirm, then reconnect LocalDevVPN.</li>
+        <li>Open SideStore. Sign in with the <strong>same Apple Account</strong> you used in iloader.</li>
+        <li>Open <strong>My Apps</strong> and tap SideStore’s own <strong>7 DAYS</strong> counter. If asked about a signing certificate, follow SideStore’s confirmation. Wait for this first refresh to succeed.</li>
+      </ol>
+      <div class="actions" data-for="iphone"><a class="button" href="sidestore://">Open SideStore</a></div>
+      <p class="note">Finish SideStore’s first refresh before installing Mirics. Mirics must appear in SideStore’s My Apps so SideStore can renew it.</p>
+      <p><a href="https://docs.sidestore.io/docs/installation/install" rel="noreferrer">Official SideStore instructions and troubleshooting</a></p>
+    </section>
+    <section class="step" data-step="3" aria-labelledby="heading-3" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-3" tabindex="-1">Install Mirics</h2>
+      <p>After SideStore’s first refresh succeeds, keep Wi-Fi and LocalDevVPN connected. The install button asks SideStore to download the latest Mirics app.</p>
+      <div class="actions" data-for="iphone"><a class="button" id="install-mirics" href="sidestore://install?url=https%3A%2F%2Fgithub.com%2Fbronsonpalm%2Fmirics-releases%2Freleases%2Flatest%2Fdownload%2FMirics.ipa">Install Mirics with SideStore</a></div>
+      <div data-for="mac" hidden><p>Open this page on your iPhone, select <strong>On iPhone</strong>, then use <strong>Install Mirics with SideStore</strong>.</p></div>
+      <p>Confirm installation in SideStore. <strong>Keep app extensions</strong> if asked; they display the lyrics. Check that Mirics appears in <strong>My Apps</strong> and refreshes successfully.</p>
+      <details><summary>If the install button doesn’t open SideStore</summary><p>On iPhone, <a href="https://github.com/bronsonpalm/mirics-releases/releases/latest/download/Mirics.ipa" rel="noreferrer">download Mirics.ipa</a> and save it to Files. In <strong>SideStore → My Apps → +</strong>, select the file. You can also AirDrop the verified Mirics.ipa from the Mac helper to the iPhone and save it in Files.</p><p>If SideStore is missing, return to step 3. Don’t install Mirics directly through iloader; install it from SideStore so renewal is managed there.</p></details>
+      <p class="small">Already have Mirics in SideStore and a successful refresh? Keep that installation and continue. The button uses SideStore’s <a href="https://docs.sidestore.io/docs/advanced/url-schema" rel="noreferrer">documented install link</a>.</p>
+    </section>
+    <section class="step" data-step="4" aria-labelledby="heading-4" hidden>
+      <p class="eyebrow">Finish once on each iPhone</p><h2 id="heading-4" tabindex="-1">Connect lyrics and daily renewal</h2>
+      <p>Open Mirics, then tap <strong>Help</strong> for the same setup steps inside the app.</p>
+      <div class="actions" data-for="iphone"><a class="button" href="lyricglass://open">Open Mirics</a><a href="shortcuts://automations">Open Automations</a></div>
+      <details open><summary>Connect Spotify and CarPlay</summary><ol><li>In Mirics, enter your Spotify developer Client ID, tap <strong>Connect Spotify</strong>, sign in, and approve access. Spotify setup in the app explains how to get a Client ID. This connection uses Spotify Premium.</li><li>Allow <strong>While Using App</strong> location access when Mirics asks. It is used by the current drive mode to keep syncing in the background; a website cannot grant it.</li><li>In Shortcuts, create <strong>Automation → + → CarPlay → Connects</strong>. Choose <strong>Run Immediately</strong>, add Mirics’s <strong>Start lyrics</strong> action, and save.</li><li>Create another CarPlay automation for <strong>Disconnects</strong>, with <strong>Run Immediately</strong> and Mirics’s <strong>Stop lyrics</strong> action.</li><li>Keep <strong>Auto-connect</strong> on in Mirics. Lyrics use the CarPlay Dashboard on <strong>iOS 26 or later</strong>. If the card is missing, check <strong>Settings → Apps → Mirics → Live Activities</strong>.</li></ol></details>
+      <details><summary>Add the refresh shortcut</summary><p><a href="https://www.icloud.com/shortcuts/e0e94173d17e40aea68b1cbbc880bbda" rel="noreferrer">Add the Mirics Refresh template</a>, tap <strong>Add Shortcut</strong>, and keep its name <strong>Mirics Refresh</strong>. If you already have it, edit your existing copy.</p><p>The shared template renews signing. It does <strong>not</strong> include the new-version update steps below. Choose <strong>LocalDevVPN</strong> in both VPN actions. If its SideStore action is unavailable, replace it with <strong>Refresh All Apps</strong> from your installed SideStore.</p></details>
+      <details><summary>Add new-version updates once</summary><ol><li>Edit <strong>Mirics Refresh</strong> using its <strong>•••</strong> button in Shortcuts.</li><li>After <strong>Wait</strong>, add Mirics’s <strong>Get Mirics update</strong> action.</li><li>Add <strong>If</strong> immediately afterward. Use the <strong>Get Mirics update</strong> result as input and choose <strong>has any value</strong>.</li><li>Inside If, above Otherwise, add SideStore’s <strong>Install IPA</strong>. Set <strong>IPA File</strong> to the <strong>Get Mirics update</strong> result.</li><li>Leave <strong>Refresh All Apps</strong> and <strong>Disconnect LocalDevVPN</strong> after <strong>End If</strong>. Keep Mirics’s <strong>Auto-update</strong> setting on if you want these checks.</li></ol><p class="flow">Connect LocalDevVPN
+Wait
+Get Mirics update
+If update result has any value
+    Install IPA: update result
+End If
+Refresh All Apps
+Disconnect LocalDevVPN</p><p>If Install IPA is unavailable, check that SideStore is current using its official guide. Don’t remove the working daily renewal while troubleshooting.</p></details>
+      <details><summary>Test and make it daily</summary><ol><li>Run <strong>Mirics Refresh</strong> once on Wi-Fi with the phone unlocked. Check that renewal succeeds and LocalDevVPN disconnects. If the shortcut stops with an error, check the error and disconnect the VPN yourself.</li><li>In Shortcuts, choose <strong>Automation → + → Time of Day → Daily</strong>. Pick a time when Wi-Fi is available, choose <strong>Run Immediately</strong>, and select <strong>Mirics Refresh</strong>.</li><li>If you already have that daily automation, keep it. You don’t need a duplicate.</li></ol><p>Updates are checked when the shortcut runs. Installing a new version may require an unlock or confirmation; fully unattended installation while locked has not been verified. Your Mac can be off after setup, but keep SideStore, LocalDevVPN, and the automation on the iPhone.</p></details>
+      <p class="note">Adding the shortcut and choosing automation triggers need your confirmation on this iPhone. Scanning this setup code cannot approve those choices or create them silently.</p>
+    </section>
+    <nav aria-label="Setup steps"><button type="button" class="secondary" id="back" disabled>Back</button><button type="button" id="next">Continue</button></nav>
+  </main>
+  <footer><p>Progress is saved only in this browser. Continue means you’re moving through the guide; this page does not verify installation or setup. <button type="button" class="reset" id="reset">Reset progress</button></p><p>Downloads come from Mirics GitHub releases, official iloader releases, and Apple’s App Store. No analytics, account details, or device identifiers are collected by this page. Hosting follows <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub’s privacy policy</a>.</p></footer>
+  <noscript><p>This guide uses JavaScript to show one step at a time. Without JavaScript, use the <a href="https://docs.sidestore.io/docs/installation/install">official SideStore guide</a>, then open Help in Mirics.</p></noscript>
+  <script>
+    (() => {
+      'use strict';
+      const storageKey = 'mirics.setup.v1';
+      const steps = Array.from(document.querySelectorAll('[data-step]'));
+      const deviceBlocks = Array.from(document.querySelectorAll('[data-for]'));
+      const count = document.getElementById('count');
+      const fill = document.getElementById('progress-fill');
+      const back = document.getElementById('back');
+      const next = document.getElementById('next');
+      const iphone = document.getElementById('iphone');
+      const mac = document.getElementById('mac');
+      let step = 0;
+      let device = document.body.dataset.device === 'mac' ? 'mac' : 'iphone';
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey));
+        if (saved && Number.isInteger(saved.step) && saved.step >= 0 && saved.step < steps.length) step = saved.step;
+        if (saved && (saved.device === 'mac' || saved.device === 'iphone')) device = saved.device;
+      } catch (_) { /* Storage is optional, including in private browsing. */ }
+      const render = (focusHeading = false) => {
+        steps.forEach((element, index) => { element.hidden = index !== step; });
+        deviceBlocks.forEach(element => { element.hidden = element.dataset.for !== device; });
+        document.body.dataset.device = device;
+        iphone.setAttribute('aria-pressed', String(device === 'iphone'));
+        mac.setAttribute('aria-pressed', String(device === 'mac'));
+        count.textContent = `Step ${step + 1} of ${steps.length}`;
+        fill.style.width = `${(step + 1) / steps.length * 100}%`;
+        back.disabled = step === 0;
+        next.textContent = step === steps.length - 1 ? 'Start over' : 'Continue';
+        try { localStorage.setItem(storageKey, JSON.stringify({step, device})); } catch (_) { /* No storage is required. */ }
+        if (focusHeading) steps[step].querySelector('h2').focus();
+      };
+      iphone.addEventListener('click', () => { device = 'iphone'; render(); });
+      mac.addEventListener('click', () => { device = 'mac'; render(); });
+      back.addEventListener('click', () => { step = Math.max(0, step - 1); render(true); });
+      next.addEventListener('click', () => { step = (step + 1) % steps.length; render(true); });
+      document.getElementById('reset').addEventListener('click', () => { step = 0; render(true); });
+      render();
+    })();
+  </script>
+</body>
+</html>
