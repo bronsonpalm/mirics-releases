@@ -222,68 +222,65 @@
     </section>
 
     <section class="step" data-step="11" aria-labelledby="heading-11" hidden>
-      <p class="eyebrow">In Mirics, then Shortcuts</p><h2 id="heading-11" tabindex="-1">Start when Spotify opens</h2>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-11" tabindex="-1">Start when Spotify opens</h2>
+      <p>Mirics build 25 or later includes its lyric controls automatically. Only the complete <strong>Mirics Refresh</strong> workflow needs to be added separately, later in this guide.</p>
       <ol class="instructions" role="list">
-        <li>Open <strong>Mirics</strong> and tap <strong>Add Mirics shortcuts</strong>. Use Mirics build 24 or later.</li>
-        <li>Follow the guided setup. For each shortcut, tap <strong>Add Shortcut</strong> or <strong>Replace</strong> in Shortcuts.</li>
-        <li>Return to <strong>Mirics</strong> and tap <strong>Added — continue</strong> after each import. Keep the shortcut names unchanged.</li>
-        <li>Add <strong>Mirics Spotify</strong>, <strong>Mirics Start</strong>, <strong>Mirics Stop</strong>, and <strong>Mirics Refresh</strong>. The last <strong>Mirics CarPlay</strong> shortcut is optional and experimental; you can skip it.</li>
-        <li>After the guided setup, open <strong>Shortcuts → Automation → +</strong>.</li>
+        <li>Open <strong>Mirics</strong> once after installing or updating it.</li>
+        <li>Open <strong>Shortcuts → Automation → +</strong>.</li>
         <li>Select <strong>App</strong>, choose <strong>Spotify</strong>, then select <strong>Is Opened</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose the saved <strong>Mirics Spotify</strong> shortcut and save the automation.</li>
+        <li>Choose <strong>Create New Shortcut</strong> (or <strong>New Blank Automation</strong>).</li>
+        <li>Tap <strong>Add Action</strong> or the action search, then search for <strong>Mirics</strong>.</li>
+        <li>Add Mirics’s <strong>Auto-start lyrics</strong> action and save.</li>
       </ol>
-      <div class="actions" data-for="iphone"><a class="button" href="lyricglass://">Open Mirics</a><a href="shortcuts://automations">Open Automations</a></div>
-      <p class="small">You confirm each shortcut in Shortcuts. Mirics saves your place in the guide; <strong>Added — continue</strong> records your confirmation. You still create the automation triggers using the steps here. If a blank automation editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Spotify</strong>.</p>
-      <details><summary>Missing a shortcut?</summary>
-        <p>Use these links to add or replace an individual shortcut. Keep its original name. For the complete guided setup, open Mirics and tap <strong>Add Mirics shortcuts</strong>.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/12b8d8c60e474c07a7c470e484760501">Add Mirics Spotify</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/12b8d8c60e474c07a7c470e484760501" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Spotify.shortcut" download="Mirics Spotify.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/3a89eca4468744d3bdd091f2be575676">Add Mirics Start</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/3a89eca4468744d3bdd091f2be575676" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Start.shortcut" download="Mirics Start.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/1246bca67eab4ce88ec36d33231eb38e">Add Mirics Stop</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/1246bca67eab4ce88ec36d33231eb38e" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Stop.shortcut" download="Mirics Stop.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/76a2edfbfa9b412d88cde6abe5178aae">Add Mirics Refresh</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/76a2edfbfa9b412d88cde6abe5178aae" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Refresh.shortcut" download="Mirics Refresh.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19">Add Mirics CarPlay</a>. <strong>Optional · experimental.</strong> Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20CarPlay.shortcut" download="Mirics CarPlay.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-      </details>
+      <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a><a href="lyricglass://">Open Mirics</a></div>
       <p class="note">Leave <strong>Auto-start lyrics</strong> on in Mirics. It is on by default. This automation starts watching when Spotify opens; pressing Play alone cannot reliably launch Mirics after it has stopped.</p>
+      <details><summary>If Mirics’s actions are missing</summary><p>Open Mirics once, then reopen Shortcuts. Confirm that Mirics’s version at the bottom of its settings is build 25 or later, and search for <strong>Mirics</strong> in the blank automation’s action search.</p></details>
+      <details><summary>Already using the older saved shortcuts?</summary>
+        <p>Working automations can stay as they are. To remove an unused saved wrapper, first change the automation to its matching built-in action:</p>
+        <ol class="instructions" role="list">
+          <li>Use <strong>Auto-start lyrics</strong> instead of <strong>Mirics Spotify</strong>; <strong>Start lyrics</strong> instead of <strong>Mirics Start</strong>; <strong>Stop lyrics</strong> instead of <strong>Mirics Stop</strong>; or experimental <strong>Sync CarPlay lyrics</strong> instead of <strong>Mirics CarPlay</strong>.</li>
+          <li>Test that automation’s trigger. Keep the saved shortcut until the test succeeds.</li>
+          <li>Check that no other automation uses that saved shortcut, then delete only the unused wrapper from <strong>All Shortcuts</strong>.</li>
+          <li>Keep <strong>Mirics Refresh</strong> and its daily automation. It contains the complete VPN, update, and refresh workflow.</li>
+        </ol>
+        <details><summary>Legacy shortcut repair links</summary>
+          <p>These links are only for repairing an older setup. New setup uses the included actions above.</p>
+        <p data-for="iphone"><a href="shortcuts://shortcuts/12b8d8c60e474c07a7c470e484760501">Open older Mirics Spotify</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/12b8d8c60e474c07a7c470e484760501" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Spotify.shortcut" download="Mirics Spotify.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
+        <p data-for="iphone"><a href="shortcuts://shortcuts/3a89eca4468744d3bdd091f2be575676">Open older Mirics Start</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/3a89eca4468744d3bdd091f2be575676" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Start.shortcut" download="Mirics Start.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
+        <p data-for="iphone"><a href="shortcuts://shortcuts/1246bca67eab4ce88ec36d33231eb38e">Open older Mirics Stop</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/1246bca67eab4ce88ec36d33231eb38e" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Stop.shortcut" download="Mirics Stop.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
+        <p data-for="iphone"><a href="shortcuts://shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19">Open older Mirics CarPlay</a>. <strong>Optional · experimental.</strong> Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20CarPlay.shortcut" download="Mirics CarPlay.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
+        </details>
+      </details>
     </section>
 
     <section class="step" data-step="12" aria-labelledby="heading-12" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-12" tabindex="-1">Start with CarPlay</h2>
-      <p>The <strong>Add Mirics shortcuts</strong> guide includes <strong>Mirics Start</strong>. Now choose when it runs.</p>
       <ol class="instructions" role="list">
-        <li>Open <strong>Shortcuts → Automation</strong>.</li>
-        <li>Tap <strong>+</strong>.</li>
-        <li>Select <strong>CarPlay</strong>.</li>
-        <li>Select <strong>Connects</strong>.</li>
+        <li>Open <strong>Shortcuts → Automation → +</strong>.</li>
+        <li>Select <strong>CarPlay</strong>, then <strong>Connects</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose the saved <strong>Mirics Start</strong> shortcut.</li>
-        <li>Save the automation.</li>
+        <li>Choose <strong>Create New Shortcut</strong> (or <strong>New Blank Automation</strong>).</li>
+        <li>Tap <strong>Add Action</strong> or the action search and search for <strong>Mirics</strong>.</li>
+        <li>Add Mirics’s <strong>Start lyrics</strong> action and save.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
-      <details><summary>Missing a shortcut?</summary>
-        <p>Use these links to add or replace an individual shortcut. Keep its original name. For the complete guided setup, open Mirics and tap <strong>Add Mirics shortcuts</strong>.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/3a89eca4468744d3bdd091f2be575676">Add Mirics Start</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/3a89eca4468744d3bdd091f2be575676" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Start.shortcut" download="Mirics Start.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-      </details>
-      <p class="small">Use Mirics build 24 or later. If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Start</strong>. Already have a working Connects automation? Keep it; do not create a duplicate.</p>
-      <p class="note">Leave <strong>Auto-connect</strong> on in Mirics. This starts watching when CarPlay connects, so you do not need to open Spotify to start music from CarPlay.</p>
+      <p class="note">Leave <strong>Auto-connect</strong> on in Mirics. This starts watching when CarPlay connects, so you do not need to open Spotify to start music from CarPlay. Keep an existing working Connects automation instead of creating a duplicate.</p>
       <details><summary>Try one CarPlay automation</summary>
-        <p><strong>Experimental:</strong> update to Mirics build 24 or later, then test this on your actual iPhone and car before replacing the two separate automations. Real-car operation has not been verified.</p>
+        <p><strong>Experimental:</strong> use Mirics build 25 or later and test on your actual iPhone and car before replacing the two separate automations. Real-car operation has not been verified.</p>
         <ol class="instructions" role="list">
-          <li>Use the optional <strong>Mirics CarPlay</strong> shortcut from <strong>Add Mirics shortcuts</strong>. If you skipped it, use <strong>Missing a shortcut?</strong> below to add it.</li>
-          <li>While parked, temporarily turn off your old CarPlay <strong>Connects</strong> and <strong>Disconnects</strong> automations.</li>
+          <li>While parked and connected to CarPlay, open <strong>Mirics → Help → Start with CarPlay → Try one CarPlay automation</strong>.</li>
+          <li>Use <strong>Check CarPlay connection</strong> first. It should say CarPlay is connected. If unavailable, keep the separate automations.</li>
+          <li>Temporarily turn off your old CarPlay <strong>Connects</strong> and <strong>Disconnects</strong> automations.</li>
           <li>Open <strong>Shortcuts → Automation → + → CarPlay</strong>.</li>
-          <li>Select both <strong>Connects</strong> and <strong>Disconnects</strong>.</li>
-          <li>Select <strong>Run Immediately</strong>, then choose the saved <strong>Mirics CarPlay</strong> shortcut.</li>
-          <li>Save and leave <strong>Auto-connect</strong> on in Mirics.</li>
+          <li>Select both <strong>Connects</strong> and <strong>Disconnects</strong>, then select <strong>Run Immediately</strong>.</li>
+          <li>Choose <strong>Create New Shortcut</strong> (or <strong>New Blank Automation</strong>), tap <strong>Add Action</strong> or the action search, and search for <strong>Mirics</strong>.</li>
+          <li>Add Mirics’s <strong>Sync CarPlay lyrics</strong> action and save. Leave <strong>Auto-connect</strong> on in Mirics.</li>
           <li>Connect to CarPlay and play a song. Check that lyrics start, including with the phone locked. Test pausing music too.</li>
           <li>Disconnect CarPlay and check that the lyric card closes.</li>
           <li>If either event fails, turn off the combined automation and turn your old two back on.</li>
         </ol>
-        <details><summary>Missing a shortcut?</summary>
-          <p>Use these links to add or replace an individual shortcut. Keep its original name. For the complete guided setup, open Mirics and tap <strong>Add Mirics shortcuts</strong>.</p>
-          <p data-for="iphone"><a href="shortcuts://shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19">Add Mirics CarPlay</a>. <strong>Optional · experimental.</strong> Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/81a0fc5dca3b4eccbb6aa0cdb6cfdc19" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20CarPlay.shortcut" download="Mirics CarPlay.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-        </details>
-        <p class="small">If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics CarPlay</strong>.</p>
-        <p>This action reads the CarPlay connection instead of toggling the current lyrics state. iOS may not make that state available on every version. In <strong>Mirics → Help → Start with CarPlay → Try one CarPlay automation</strong>, use <strong>Check CarPlay connection</strong> while connected first; it reads the state without starting or stopping lyrics.</p>
+        <p>This action reads the CarPlay connection instead of toggling the current lyrics state. iOS may not make that state available on every version. The connection check only reads the state; it does not start or stop lyrics.</p>
         <p>If the combined test passes, the next <strong>Stop after driving</strong> page is only a fallback; you do not need an additional Disconnects automation.</p>
       </details>
       <p class="small">Do not use CarPlay? Skip this page and the next one.</p>
@@ -291,39 +288,29 @@
 
     <section class="step" data-step="13" aria-labelledby="heading-13" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-13" tabindex="-1">Stop after driving</h2>
-      <p>The <strong>Add Mirics shortcuts</strong> guide includes <strong>Mirics Stop</strong>. Now choose when it runs.</p>
       <ol class="instructions" role="list">
-        <li>Create another automation in <strong>Shortcuts → Automation → +</strong>.</li>
-        <li>Select <strong>CarPlay</strong>.</li>
-        <li>Select <strong>Disconnects</strong>.</li>
+        <li>Open <strong>Shortcuts → Automation → +</strong>.</li>
+        <li>Select <strong>CarPlay</strong>, then <strong>Disconnects</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose the saved <strong>Mirics Stop</strong> shortcut.</li>
-        <li>Save the automation.</li>
+        <li>Choose <strong>Create New Shortcut</strong> (or <strong>New Blank Automation</strong>).</li>
+        <li>Tap <strong>Add Action</strong> or the action search and search for <strong>Mirics</strong>.</li>
+        <li>Add Mirics’s <strong>Stop lyrics</strong> action and save.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
-      <details><summary>Missing a shortcut?</summary>
-        <p>Use these links to add or replace an individual shortcut. Keep its original name. For the complete guided setup, open Mirics and tap <strong>Add Mirics shortcuts</strong>.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/1246bca67eab4ce88ec36d33231eb38e">Add Mirics Stop</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/1246bca67eab4ce88ec36d33231eb38e" rel="noreferrer">Open in iCloud</a>. <a href="Mirics%20Stop.shortcut" download="Mirics Stop.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-      </details>
-      <p class="small">Use Mirics build 24 or later. If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Stop</strong>. Keep a working Disconnects automation instead of adding a duplicate. Skip this page if the combined CarPlay test passed.</p>
-      <p class="note">This stops lyric syncing and Mirics’s background location use when your drive ends.</p>
+      <p class="note">This stops lyric syncing and Mirics’s background location use when your drive ends. Keep an existing working Disconnects automation instead of creating a duplicate. Skip this separate automation if the combined CarPlay test passed.</p>
     </section>
 
     <section class="step" data-step="14" aria-labelledby="heading-14" hidden>
-      <p class="eyebrow">On your iPhone</p><h2 id="heading-14" tabindex="-1">Check Mirics Refresh</h2>
-      <p>The <strong>Add Mirics shortcuts</strong> guide includes <strong>Mirics Refresh</strong>. If you added it there, continue without adding it again.</p>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-14" tabindex="-1">Add Mirics Refresh</h2>
+      <p>This is the only saved shortcut needed for normal Mirics setup. It includes the complete update, signing refresh, and VPN workflow.</p>
       <ol class="instructions" role="list">
-        <li>Open <strong>Shortcuts → All Shortcuts</strong>.</li>
-        <li>Check that <strong>Mirics Refresh</strong> is there and keep its name unchanged.</li>
-        <li>If it is missing, open <strong>Mirics → Add Mirics shortcuts</strong> and continue its guided setup, or use the repair links below.</li>
-        <li>Continue to the next page to test the refresh.</li>
+        <li>Tap <strong>Add Mirics Refresh</strong> below.</li>
+        <li>In Shortcuts, tap <strong>Add Shortcut</strong> or <strong>Replace</strong>.</li>
+        <li>Keep the name <strong>Mirics Refresh</strong>.</li>
+        <li>Continue to the next page to test it. If your existing Mirics Refresh already works, keep it and continue.</li>
       </ol>
-      <div class="actions" data-for="iphone"><a class="button" href="lyricglass://">Open Mirics</a><a href="shortcuts://">Open Shortcuts</a></div>
-      <details><summary>Missing a shortcut?</summary>
-        <p>Use these links to add or replace an individual shortcut. Keep its original name. For the complete guided setup, open Mirics and tap <strong>Add Mirics shortcuts</strong>.</p>
-        <p data-for="iphone"><a href="shortcuts://shortcuts/76a2edfbfa9b412d88cde6abe5178aae">Add Mirics Refresh</a>. Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/76a2edfbfa9b412d88cde6abe5178aae" rel="noreferrer">Open in iCloud</a>. <a id="add-refresh-shortcut" href="Mirics%20Refresh.shortcut" download="Mirics Refresh.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-      </details>
-      <p class="note">This is the complete shortcut. Its refresh, update, and VPN actions are already included. Keep its name <strong>Mirics Refresh</strong>; you do not need to build or edit it.</p>
+      <div class="actions" data-for="iphone"><a class="button" href="shortcuts://shortcuts/76a2edfbfa9b412d88cde6abe5178aae">Add Mirics Refresh</a></div>
+      <p class="small" data-for="iphone">Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/76a2edfbfa9b412d88cde6abe5178aae" rel="noreferrer">Open in iCloud</a>. <a id="add-refresh-shortcut" href="Mirics%20Refresh.shortcut" download="Mirics Refresh.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
       <details><summary>If the shortcut does not open</summary><p>If you used the file download instead, open <strong>Files → Downloads → Mirics Refresh.shortcut</strong>. If an app action is unavailable, open LocalDevVPN, Mirics, and SideStore once, then try again. Use LocalDevVPN 1.3.0 or later.</p></details>
       <details><summary>What the shortcut does</summary><p class="flow">Enable LocalDevVPN
 Wait
@@ -362,7 +349,7 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
         <li>Save the automation.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
-      <p class="small">If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Refresh</strong>. You do not need to recreate the shortcut’s actions.</p>
+      <p class="small">If a blank editor opens, add <strong>Run Shortcut</strong> and select the saved <strong>Mirics Refresh</strong>. Choose this complete saved workflow for the daily automation; Mirics’s included <strong>Refresh / update</strong> control opens it for manual use.</p>
       <p class="note">Already made this automation? Keep the existing one. You do not need a duplicate. The shortcut turns LocalDevVPN on, renews your apps, then turns it off.</p>
       <p class="small">New app installations may need you to unlock or confirm. Fully unattended updating while locked has not been verified.</p>
     </section>
