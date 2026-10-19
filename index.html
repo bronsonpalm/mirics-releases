@@ -23,7 +23,7 @@
     <button type="button" id="mac" aria-pressed="false">On computer</button>
   </div>
   <main>
-    <div class="progress"><p class="count" id="count" aria-live="polite">Step 1 of 14</p><div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill" style="width:7.14%"></div></div></div>
+    <div class="progress"><p class="count" id="count" aria-live="polite">Step 1 of 18</p><div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill" style="width:5.56%"></div></div></div>
 
     <section class="step" data-step="0" aria-labelledby="heading-0">
       <p class="eyebrow">On your computer</p><h2 id="heading-0" tabindex="-1">Get iloader for free</h2>
@@ -53,7 +53,7 @@
         </ol>
       </div>
       <p class="note">iloader is free. A donation is optional; these links go directly to its official downloads.</p>
-      <p class="skip">SideStore is already installed and refreshes successfully? <button type="button" class="reset" data-go="5">Skip to Install Mirics</button>.</p>
+      <p class="skip">SideStore is already installed and refreshes successfully? <button type="button" class="reset" data-go="9">Skip to Install Mirics</button>.</p>
       <p class="small"><a href="https://docs.sidestore.io/docs/installation/prerequisites" rel="noreferrer">Official computer requirements</a></p>
       <details><summary>Optional Mac download helper</summary><p>The <a href="https://github.com/bronsonpalm/mirics-releases/releases/download/setup-v2/MiricsSetup.zip" rel="noreferrer">Mirics Mac setup package</a> downloads iloader and the latest Mirics file for you. Unzip it, keep its files together, then open <strong>Set up Mirics.command</strong>. It checks the app download’s size and SHA-256 checksum. You still approve the installation and Apple Account prompts yourself.</p><p>If you use this helper, continue with the same iPhone steps below. You do not need Xcode or Python.</p></details>
     </section>
@@ -72,21 +72,48 @@
     </section>
 
     <section class="step" data-step="2" aria-labelledby="heading-2" hidden>
-      <p class="eyebrow">Computer and iPhone</p><h2 id="heading-2" tabindex="-1">Install SideStore</h2>
+      <p class="eyebrow">Computer and iPhone</p><h2 id="heading-2" tabindex="-1">Connect your iPhone</h2>
       <ol class="instructions" role="list">
-        <li>Connect your unlocked iPhone to the computer with a USB cable.</li>
+        <li>Unlock your iPhone and keep it unlocked.</li>
+        <li>Connect it to your computer with a USB cable.</li>
         <li>Tap <strong>Trust</strong> on your iPhone if asked.</li>
-        <li>Sign in to <strong>iloader</strong> on the computer with your own Apple Account.</li>
-        <li>Select your iPhone in iloader.</li>
-        <li>Choose <strong>Install SideStore (Stable)</strong>.</li>
-        <li>Wait for iloader to finish.</li>
+        <li>Enter your iPhone passcode to confirm.</li>
+        <li>Open <strong>iloader</strong> on the computer.</li>
+        <li>Check that your iPhone appears in iloader’s device list.</li>
       </ol>
-      <p class="note">Use the same Apple Account in iloader and SideStore. Enter your password only into those apps, never into this website.</p>
-      <p class="small"><a href="https://docs.sidestore.io/docs/installation/install" rel="noreferrer">Official SideStore installation help</a></p>
+      <p class="note">If your iPhone is missing, unlock it, reconnect the cable, and check for a Trust prompt. Choose <strong>Refresh Devices</strong> in iloader, then check its device list again. Try a USB cable that supports data. On Windows, make sure iTunes from Apple is installed.</p>
+      <p class="small"><a href="https://docs.sidestore.io/docs/installation/prerequisites" rel="noreferrer">Official connection requirements</a></p>
     </section>
 
     <section class="step" data-step="3" aria-labelledby="heading-3" hidden>
-      <p class="eyebrow">On your iPhone</p><h2 id="heading-3" tabindex="-1">Allow development apps</h2>
+      <p class="eyebrow">In iloader on your computer</p><h2 id="heading-3" tabindex="-1">Install SideStore with iloader</h2>
+      <ol class="instructions" role="list">
+        <li>Sign in to <strong>iloader</strong> with your own <strong>Apple Account</strong>.</li>
+        <li>Enter your Apple verification code if asked.</li>
+        <li>Select your iPhone in <strong>iloader</strong>.</li>
+        <li>Choose <strong>SideStore (Stable)</strong> under <strong>Installers</strong>.</li>
+        <li>Keep the iPhone connected while iloader installs SideStore and sets up pairing.</li>
+        <li>Wait until iloader reports that installation finished.</li>
+      </ol>
+      <p class="note">Remember which Apple Account you use here. You will use that same account inside SideStore. Enter your password only into iloader or SideStore, never into this website.</p>
+      <details><summary>If iloader won’t sign in</summary>
+        <ol class="instructions" role="list">
+          <li>In <strong>iloader on your computer</strong>, scroll down to <strong>Settings</strong> below <strong>Installers</strong>.</li>
+          <li>Open the <strong>Anisette Server</strong> menu.</li>
+          <li>If your current server is different, choose <strong>Jkcoxson (Mac)</strong>, with the address <span class="address">https://mac-ani.jkcoxson.com</span>.</li>
+          <li>If that preset is missing, choose <strong>Use custom Anisette server</strong> and enter <span class="address">https://mac-ani.jkcoxson.com</span>.</li>
+          <li>Return to the Apple Account sign-in area and try signing in once.</li>
+          <li>Enter your Apple verification code if asked.</li>
+          <li>After sign-in succeeds, select your iPhone and choose <strong>SideStore (Stable)</strong>.</li>
+        </ol>
+        <p>The server choice saves automatically. <strong>Jkcoxson (Mac)</strong> also works from Windows. If it is already selected or unavailable, try another listed server. Leave the server unchanged when sign-in works.</p>
+        <p>These are <strong>iloader’s</strong> settings on the computer. SideStore has its own server settings on the iPhone, covered later. Server names can vary by iloader version. <a href="https://github.com/nab138/iloader/releases/tag/v2.3.9" rel="noreferrer">Official iloader server-change release notes</a></p>
+      </details>
+      <p class="small">iloader handles pairing during this installation. Do not disconnect the cable yet. <a href="https://docs.sidestore.io/docs/installation/install" rel="noreferrer">Official SideStore installation steps</a></p>
+    </section>
+
+    <section class="step" data-step="4" aria-labelledby="heading-4" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-4" tabindex="-1">Allow development apps</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Settings → General → VPN &amp; Device Management</strong>.</li>
         <li>Trust the developer entry for the Apple Account you used in iloader.</li>
@@ -99,24 +126,71 @@
       <p class="note">Already trusted and enabled? Continue. Developer Mode must stay on for your SideStore apps to run.</p>
     </section>
 
-    <section class="step" data-step="4" aria-labelledby="heading-4" hidden>
-      <p class="eyebrow">On your iPhone</p><h2 id="heading-4" tabindex="-1">Refresh SideStore once</h2>
+    <section class="step" data-step="5" aria-labelledby="heading-5" hidden>
+      <p class="eyebrow">In SideStore on your iPhone</p><h2 id="heading-5" tabindex="-1">Sign into SideStore</h2>
+      <ol class="instructions" role="list">
+        <li>Unlock your iPhone and connect it to <strong>Wi-Fi</strong>.</li>
+        <li>Open <strong>LocalDevVPN</strong> and connect it.</li>
+        <li>Open <strong>SideStore</strong>.</li>
+        <li>Choose <strong>Sign In</strong> if SideStore is not already signed in.</li>
+        <li>Use the <strong>same Apple Account</strong> you used in iloader.</li>
+        <li>Enter your Apple verification code if asked.</li>
+        <li>Wait for SideStore to finish signing in.</li>
+      </ol>
+      <div class="actions" data-for="iphone"><a class="button" href="sidestore://">Open SideStore</a></div>
+      <p class="note">Signed in successfully? Skip the two troubleshooting pages. If you see an error such as <strong>-80045</strong> or <strong>45061</strong>, choose <strong>Next step</strong> for the fixes that worked on the tested iPhone.</p>
+      <div class="actions"><button type="button" class="secondary" data-go="8">Signed in — continue to refresh</button></div>
+      <p class="small"><a href="https://docs.sidestore.io/docs/troubleshooting" rel="noreferrer">Official SideStore sign-in help</a></p>
+    </section>
+
+    <section class="step" data-step="6" aria-labelledby="heading-6" hidden>
+      <p class="eyebrow">Optional · only if sign-in fails</p><h2 id="heading-6" tabindex="-1">Choose a different sign-in server</h2>
+      <ol class="instructions" role="list">
+        <li>Open <strong>SideStore → Settings</strong>.</li>
+        <li>Scroll down and turn <strong>On-Device Anisette</strong> off if it is shown. In newer versions, look under <strong>User Customizations</strong>.</li>
+        <li>Close and reopen SideStore if <strong>Anisette Servers</strong> is missing.</li>
+        <li>Open <strong>Settings → Anisette Servers</strong>.</li>
+        <li>Only if SideStore keeps changing your selected server, turn <strong>Enable Auto Rotation</strong> off in <strong>Customization</strong>.</li>
+        <li>Select the <strong>jkcoxson</strong> server with the address <span class="address">https://mac-ani.jkcoxson.com</span>.</li>
+        <li>Return to <strong>Sign In</strong> and try signing in once with the same Apple Account.</li>
+      </ol>
+      <p class="note">Leave Auto Rotation as it is if your server selection stays put. This server change helped on the tested iPhone; it is not a guaranteed fix. Menu names can vary by SideStore version. jkcoxson is independently operated and appears in SideStore’s maintained server list. If it is unavailable, choose another supported server from SideStore’s list.</p>
+      <div class="actions"><button type="button" class="secondary" data-go="8">Signed in — continue to refresh</button></div>
+      <p class="small">Still seeing <strong>45061</strong> or another sign-in error? Continue to the next page. <a href="https://docs.sidestore.io/docs/advanced/anisette" rel="noreferrer">Official anisette server guide</a> · <a href="https://github.com/SideStore/anisette-servers/blob/main/servers.json" rel="noreferrer">SideStore’s maintained server list</a></p>
+    </section>
+
+    <section class="step" data-step="7" aria-labelledby="heading-7" hidden>
+      <p class="eyebrow">Optional · only if errors remain</p><h2 id="heading-7" tabindex="-1">Reset SideStore’s sign-in data</h2>
+      <p>This was the final step that resolved <strong>45061</strong> on the tested iPhone. Use it only if changing the server did not let you sign in.</p>
+      <ol class="instructions" role="list">
+        <li>Open <strong>SideStore → Settings → Anisette Servers</strong>.</li>
+        <li>Find <strong>Troubleshooting → Reset adi.pb</strong>. If it is not there, check <strong>Settings → User Customizations</strong>.</li>
+        <li>Choose <strong>Reset &amp; Sign Out</strong>.</li>
+        <li>Return to SideStore’s sign-in screen.</li>
+        <li>Sign in once with the <strong>same Apple Account</strong> you used in iloader.</li>
+        <li>Enter your Apple verification code if asked.</li>
+      </ol>
+      <p class="note">This clears SideStore’s local sign-in data and signs you out of SideStore. It does not sign your iPhone out of its Apple Account. It is not a pairing-file reset; do not delete pairing files for these steps.</p>
+      <p class="small">If the error remains, keep its exact code and use <a href="https://docs.sidestore.io/docs/troubleshooting" rel="noreferrer">SideStore’s official troubleshooting help</a> before installing Mirics. Repeating sign-in attempts is not required.</p>
+    </section>
+
+    <section class="step" data-step="8" aria-labelledby="heading-8" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-8" tabindex="-1">Refresh SideStore once</h2>
       <ol class="instructions" role="list">
         <li>Unlock your iPhone.</li>
         <li>Reconnect <strong>LocalDevVPN</strong>.</li>
         <li>Open <strong>SideStore</strong>.</li>
-        <li>Sign in with the <strong>same Apple Account</strong> you used in iloader.</li>
         <li>Open <strong>My Apps</strong>.</li>
-        <li>Tap SideStore’s own <strong>7 DAYS</strong> counter to refresh it.</li>
+        <li>Tap SideStore’s own days-remaining counter, such as <strong>7 DAYS</strong>, to refresh it.</li>
         <li>Wait for the refresh to finish successfully.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="sidestore://">Open SideStore</a></div>
-      <p class="note">Complete this refresh before installing Mirics. If SideStore asks you to confirm its signing certificate, follow its prompt.</p>
-      <p class="small"><a href="https://docs.sidestore.io/docs/installation/install" rel="noreferrer">If SideStore cannot sign in or refresh</a></p>
+      <p class="note">Complete this refresh before installing Mirics. If SideStore asks you to confirm its signing certificate, follow its prompt. If you are signed out, return to the Sign into SideStore page first.</p>
+      <p class="small"><a href="https://docs.sidestore.io/docs/troubleshooting" rel="noreferrer">If SideStore cannot sign in or refresh</a></p>
     </section>
 
-    <section class="step" data-step="5" aria-labelledby="heading-5" hidden>
-      <p class="eyebrow">On your iPhone</p><h2 id="heading-5" tabindex="-1">Install Mirics</h2>
+    <section class="step" data-step="9" aria-labelledby="heading-9" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-9" tabindex="-1">Install Mirics</h2>
       <ol class="instructions" role="list">
         <li>Keep <strong>Wi-Fi</strong> and <strong>LocalDevVPN</strong> connected.</li>
         <li>Tap <strong>Install Mirics with SideStore</strong> below on your iPhone.</li>
@@ -130,8 +204,8 @@
       <details><summary>If the install button does not work</summary><ol class="instructions" role="list"><li><a href="https://github.com/bronsonpalm/mirics-releases/releases/latest/download/Mirics.ipa" rel="noreferrer">Download Mirics.ipa</a> on your iPhone.</li><li>Save the download in <strong>Files</strong>.</li><li>Open <strong>SideStore → My Apps → +</strong>.</li><li>Select <strong>Mirics.ipa</strong>.</li></ol><p>If SideStore is missing, return to <strong>Install SideStore</strong>. Install Mirics through SideStore so SideStore can renew it later. The button uses SideStore’s <a href="https://docs.sidestore.io/docs/advanced/url-schema" rel="noreferrer">documented install link</a>.</p></details>
     </section>
 
-    <section class="step" data-step="6" aria-labelledby="heading-6" hidden>
-      <p class="eyebrow">In Mirics on your iPhone</p><h2 id="heading-6" tabindex="-1">Connect Spotify</h2>
+    <section class="step" data-step="10" aria-labelledby="heading-10" hidden>
+      <p class="eyebrow">In Mirics on your iPhone</p><h2 id="heading-10" tabindex="-1">Connect Spotify</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Mirics</strong>.</li>
         <li>Tap <strong>Connect Spotify</strong>.</li>
@@ -147,8 +221,8 @@
       <p class="small">Current drive mode uses location to keep lyrics syncing in the background. If the lyrics card is missing, allow <strong>Settings → Apps → Mirics → Live Activities</strong>. CarPlay Dashboard lyrics require iOS 26 or later.</p>
     </section>
 
-    <section class="step" data-step="7" aria-labelledby="heading-7" hidden>
-      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-7" tabindex="-1">Start when Spotify opens</h2>
+    <section class="step" data-step="11" aria-labelledby="heading-11" hidden>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-11" tabindex="-1">Start when Spotify opens</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Shortcuts → Automation</strong>.</li>
         <li>Tap <strong>+</strong> to create an automation.</li>
@@ -164,8 +238,8 @@
       <p class="note">Leave <strong>Auto-start lyrics</strong> on in Mirics. It is on by default. This automation starts watching when Spotify opens; pressing Play alone cannot reliably launch Mirics after it has stopped.</p>
     </section>
 
-    <section class="step" data-step="8" aria-labelledby="heading-8" hidden>
-      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-8" tabindex="-1">Start with CarPlay</h2>
+    <section class="step" data-step="12" aria-labelledby="heading-12" hidden>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-12" tabindex="-1">Start with CarPlay</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Shortcuts → Automation</strong>.</li>
         <li>Tap <strong>+</strong>.</li>
@@ -181,8 +255,8 @@
       <p class="small">Do not use CarPlay? Skip this page and the next one.</p>
     </section>
 
-    <section class="step" data-step="9" aria-labelledby="heading-9" hidden>
-      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-9" tabindex="-1">Stop after driving</h2>
+    <section class="step" data-step="13" aria-labelledby="heading-13" hidden>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-13" tabindex="-1">Stop after driving</h2>
       <ol class="instructions" role="list">
         <li>Create another automation in <strong>Shortcuts → Automation → +</strong>.</li>
         <li>Select <strong>CarPlay</strong>.</li>
@@ -196,8 +270,8 @@
       <p class="note">This stops lyric syncing and Mirics’s background location use when your drive ends.</p>
     </section>
 
-    <section class="step" data-step="10" aria-labelledby="heading-10" hidden>
-      <p class="eyebrow">On your iPhone</p><h2 id="heading-10" tabindex="-1">Add Mirics Refresh</h2>
+    <section class="step" data-step="14" aria-labelledby="heading-14" hidden>
+      <p class="eyebrow">On your iPhone</p><h2 id="heading-14" tabindex="-1">Add Mirics Refresh</h2>
       <ol class="instructions" role="list">
         <li>Tap <strong>Add Mirics Refresh</strong> below.</li>
         <li>Open the downloaded <strong>Mirics Refresh.shortcut</strong> file.</li>
@@ -218,8 +292,8 @@ Refresh All Apps
 Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to check for new versions. If Mirics is already current, installation is skipped and renewal continues.</p></details>
     </section>
 
-    <section class="step" data-step="11" aria-labelledby="heading-11" hidden>
-      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-11" tabindex="-1">Test the refresh</h2>
+    <section class="step" data-step="15" aria-labelledby="heading-15" hidden>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-15" tabindex="-1">Test the refresh</h2>
       <ol class="instructions" role="list">
         <li>Keep your iPhone unlocked and connected to <strong>Wi-Fi</strong>.</li>
         <li>Run <strong>Mirics Refresh</strong> from Shortcuts.</li>
@@ -232,8 +306,8 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
       <p class="note">If a step fails, stop here and check the error before creating the daily automation. Disconnect LocalDevVPN yourself if the shortcut stops before turning it off.</p>
     </section>
 
-    <section class="step" data-step="12" aria-labelledby="heading-12" hidden>
-      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-12" tabindex="-1">Refresh automatically every day</h2>
+    <section class="step" data-step="16" aria-labelledby="heading-16" hidden>
+      <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-16" tabindex="-1">Refresh automatically every day</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Shortcuts → Automation</strong>.</li>
         <li>Tap <strong>+</strong>.</li>
@@ -249,8 +323,8 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
       <p class="small">New app installations may need you to unlock or confirm. Fully unattended updating while locked has not been verified.</p>
     </section>
 
-    <section class="step" data-step="13" aria-labelledby="heading-13" hidden>
-      <p class="eyebrow">Setup complete</p><h2 id="heading-13" tabindex="-1">Try your lyrics</h2>
+    <section class="step" data-step="17" aria-labelledby="heading-17" hidden>
+      <p class="eyebrow">Setup complete</p><h2 id="heading-17" tabindex="-1">Try your lyrics</h2>
       <ol class="instructions" role="list">
         <li>Open <strong>Spotify</strong> to test your auto-start automation.</li>
         <li>Play a song that has timed lyrics.</li>
@@ -269,7 +343,7 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
   <script>
     (() => {
       'use strict';
-      const storageKey = 'mirics.setup.numbered.v2';
+      const storageKey = 'mirics.setup.numbered.v3';
       const steps = Array.from(document.querySelectorAll('[data-step]'));
       const deviceBlocks = Array.from(document.querySelectorAll('[data-for]'));
       const count = document.getElementById('count');
