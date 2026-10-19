@@ -224,47 +224,54 @@
     <section class="step" data-step="11" aria-labelledby="heading-11" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-11" tabindex="-1">Start when Spotify opens</h2>
       <ol class="instructions" role="list">
+        <li>Tap <strong>Add Mirics Spotify</strong> below, then open the downloaded <strong>Mirics Spotify.shortcut</strong> file.</li>
+        <li>Tap <strong>Add Shortcut</strong>. Choose <strong>Replace</strong> if asked and keep its name <strong>Mirics Spotify</strong>.</li>
         <li>Open <strong>Shortcuts → Automation</strong>.</li>
         <li>Tap <strong>+</strong> to create an automation.</li>
         <li>Select <strong>App</strong>.</li>
         <li>Choose <strong>Spotify</strong>.</li>
         <li>Select <strong>Is Opened</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose <strong>New Blank Automation</strong> if shown.</li>
-        <li>Add Mirics’s <strong>Auto-start lyrics</strong> action.</li>
+        <li>Choose the saved <strong>Mirics Spotify</strong> shortcut.</li>
         <li>Save the automation.</li>
       </ol>
-      <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
+      <div class="actions" data-for="iphone"><a class="button" href="Mirics%20Spotify.shortcut" download="Mirics Spotify.shortcut" rel="noreferrer">Add Mirics Spotify</a><a href="shortcuts://automations">Open Automations</a></div>
+      <p class="small">Use Mirics build 22 or later. If a blank editor opens instead of the shortcut picker, add <strong>Run Shortcut</strong>, select <strong>Mirics Spotify</strong>, then save. The shortcut is already complete; no action editing is needed.</p>
       <p class="note">Leave <strong>Auto-start lyrics</strong> on in Mirics. It is on by default. This automation starts watching when Spotify opens; pressing Play alone cannot reliably launch Mirics after it has stopped.</p>
     </section>
 
     <section class="step" data-step="12" aria-labelledby="heading-12" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-12" tabindex="-1">Start with CarPlay</h2>
       <ol class="instructions" role="list">
+        <li>Tap <strong>Add Mirics Start</strong> below, then open the downloaded <strong>Mirics Start.shortcut</strong> file.</li>
+        <li>Tap <strong>Add Shortcut</strong>. Choose <strong>Replace</strong> if asked and keep its name <strong>Mirics Start</strong>.</li>
         <li>Open <strong>Shortcuts → Automation</strong>.</li>
         <li>Tap <strong>+</strong>.</li>
         <li>Select <strong>CarPlay</strong>.</li>
         <li>Select <strong>Connects</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose <strong>New Blank Automation</strong> if shown.</li>
-        <li>Add Mirics’s <strong>Start lyrics</strong> action.</li>
+        <li>Choose the saved <strong>Mirics Start</strong> shortcut.</li>
         <li>Save the automation.</li>
       </ol>
-      <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
+      <div class="actions" data-for="iphone"><a class="button" href="Mirics%20Start.shortcut" download="Mirics Start.shortcut" rel="noreferrer">Add Mirics Start</a><a href="shortcuts://automations">Open Automations</a></div>
+      <p class="small">Use Mirics build 22 or later. If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Start</strong>. Already have a working Connects automation? Keep it; do not create a duplicate.</p>
       <p class="note">Leave <strong>Auto-connect</strong> on in Mirics. This starts watching when CarPlay connects, so you do not need to open Spotify to start music from CarPlay.</p>
       <details><summary>Try one CarPlay automation</summary>
-        <p><strong>Experimental:</strong> update to Mirics build 21 or later, then test this on your actual iPhone and car before replacing the two separate automations.</p>
+        <p><strong>Experimental:</strong> update to Mirics build 22 or later, then test this on your actual iPhone and car before replacing the two separate automations. Real-car operation has not been verified.</p>
         <ol class="instructions" role="list">
+          <li>Tap <strong>Add Mirics CarPlay</strong> below and open <strong>Mirics CarPlay.shortcut</strong>.</li>
+          <li>Tap <strong>Add Shortcut</strong>. Choose <strong>Replace</strong> if asked and keep its name <strong>Mirics CarPlay</strong>.</li>
           <li>While parked, temporarily turn off your old CarPlay <strong>Connects</strong> and <strong>Disconnects</strong> automations.</li>
           <li>Open <strong>Shortcuts → Automation → + → CarPlay</strong>.</li>
           <li>Select both <strong>Connects</strong> and <strong>Disconnects</strong>.</li>
-          <li>Select <strong>Run Immediately</strong>, then <strong>New Blank Automation</strong> if shown.</li>
-          <li>Add Mirics’s <strong>Sync CarPlay lyrics</strong> action.</li>
+          <li>Select <strong>Run Immediately</strong>, then choose the saved <strong>Mirics CarPlay</strong> shortcut.</li>
           <li>Save and leave <strong>Auto-connect</strong> on in Mirics.</li>
           <li>Connect to CarPlay and play a song. Check that lyrics start, including with the phone locked. Test pausing music too.</li>
           <li>Disconnect CarPlay and check that the lyric card closes.</li>
           <li>If either event fails, turn off the combined automation and turn your old two back on.</li>
         </ol>
+        <div class="actions" data-for="iphone"><a class="button" href="Mirics%20CarPlay.shortcut" download="Mirics CarPlay.shortcut" rel="noreferrer">Add Mirics CarPlay</a></div>
+        <p class="small">If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics CarPlay</strong>.</p>
         <p>This action reads the CarPlay connection instead of toggling the current lyrics state. iOS may not make that state available on every version. In <strong>Mirics → Help → Start with CarPlay → Try one CarPlay automation</strong>, use <strong>Check CarPlay connection</strong> while connected first; it reads the state without starting or stopping lyrics.</p>
         <p>If the combined test passes, the next <strong>Stop after driving</strong> page is only a fallback; you do not need an additional Disconnects automation.</p>
       </details>
@@ -274,15 +281,17 @@
     <section class="step" data-step="13" aria-labelledby="heading-13" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-13" tabindex="-1">Stop after driving</h2>
       <ol class="instructions" role="list">
+        <li>Tap <strong>Add Mirics Stop</strong> below, then open the downloaded <strong>Mirics Stop.shortcut</strong> file.</li>
+        <li>Tap <strong>Add Shortcut</strong>. Choose <strong>Replace</strong> if asked and keep its name <strong>Mirics Stop</strong>.</li>
         <li>Create another automation in <strong>Shortcuts → Automation → +</strong>.</li>
         <li>Select <strong>CarPlay</strong>.</li>
         <li>Select <strong>Disconnects</strong>.</li>
         <li>Select <strong>Run Immediately</strong>.</li>
-        <li>Choose <strong>New Blank Automation</strong> if shown.</li>
-        <li>Add Mirics’s <strong>Stop lyrics</strong> action.</li>
+        <li>Choose the saved <strong>Mirics Stop</strong> shortcut.</li>
         <li>Save the automation.</li>
       </ol>
-      <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
+      <div class="actions" data-for="iphone"><a class="button" href="Mirics%20Stop.shortcut" download="Mirics Stop.shortcut" rel="noreferrer">Add Mirics Stop</a><a href="shortcuts://automations">Open Automations</a></div>
+      <p class="small">Use Mirics build 22 or later. If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Stop</strong>. Keep a working Disconnects automation instead of adding a duplicate. Skip this page if the combined CarPlay test passed.</p>
       <p class="note">This stops lyric syncing and Mirics’s background location use when your drive ends.</p>
     </section>
 
@@ -335,6 +344,7 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
         <li>Save the automation.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
+      <p class="small">If a blank editor opens, add <strong>Run Shortcut</strong> and select <strong>Mirics Refresh</strong>. You do not need to recreate the shortcut’s actions.</p>
       <p class="note">Already made this automation? Keep the existing one. You do not need a duplicate. The shortcut turns LocalDevVPN on, renews your apps, then turns it off.</p>
       <p class="small">New app installations may need you to unlock or confirm. Fully unattended updating while locked has not been verified.</p>
     </section>
