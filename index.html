@@ -252,6 +252,22 @@
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://automations">Open Automations</a></div>
       <p class="note">Leave <strong>Auto-connect</strong> on in Mirics. This starts watching when CarPlay connects, so you do not need to open Spotify to start music from CarPlay.</p>
+      <details><summary>Try one CarPlay automation</summary>
+        <p><strong>Experimental:</strong> update to Mirics build 21 or later, then test this on your actual iPhone and car before replacing the two separate automations.</p>
+        <ol class="instructions" role="list">
+          <li>While parked, temporarily turn off your old CarPlay <strong>Connects</strong> and <strong>Disconnects</strong> automations.</li>
+          <li>Open <strong>Shortcuts → Automation → + → CarPlay</strong>.</li>
+          <li>Select both <strong>Connects</strong> and <strong>Disconnects</strong>.</li>
+          <li>Select <strong>Run Immediately</strong>, then <strong>New Blank Automation</strong> if shown.</li>
+          <li>Add Mirics’s <strong>Sync CarPlay lyrics</strong> action.</li>
+          <li>Save and leave <strong>Auto-connect</strong> on in Mirics.</li>
+          <li>Connect to CarPlay and play a song. Check that lyrics start, including with the phone locked. Test pausing music too.</li>
+          <li>Disconnect CarPlay and check that the lyric card closes.</li>
+          <li>If either event fails, turn off the combined automation and turn your old two back on.</li>
+        </ol>
+        <p>This action reads the CarPlay connection instead of toggling the current lyrics state. iOS may not make that state available on every version. In <strong>Mirics → Help → Start with CarPlay → Try one CarPlay automation</strong>, use <strong>Check CarPlay connection</strong> while connected first; it reads the state without starting or stopping lyrics.</p>
+        <p>If the combined test passes, the next <strong>Stop after driving</strong> page is only a fallback; you do not need an additional Disconnects automation.</p>
+      </details>
       <p class="small">Do not use CarPlay? Skip this page and the next one.</p>
     </section>
 
