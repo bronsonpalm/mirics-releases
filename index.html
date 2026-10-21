@@ -302,7 +302,7 @@
 
     <section class="step" data-step="14" aria-labelledby="heading-14" hidden>
       <p class="eyebrow">On your iPhone</p><h2 id="heading-14" tabindex="-1">Add Mirics Refresh</h2>
-      <p>This is the only saved shortcut needed for normal Mirics setup. It includes the complete update, signing refresh, and VPN workflow.</p>
+      <p>This is the only saved shortcut needed for normal Mirics setup. It includes the complete update, signing refresh, and VPN workflow. Cellular updates optionally use the two helper downloads below.</p>
       <ol class="instructions" role="list">
         <li>Tap <strong>Add Mirics Refresh</strong> below.</li>
         <li>In Shortcuts, tap <strong>Add Shortcut</strong> or <strong>Replace</strong>.</li>
@@ -312,6 +312,22 @@
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://shortcuts/76a2edfbfa9b412d88cde6abe5178aae">Add Mirics Refresh</a></div>
       <p class="small" data-for="iphone">Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/76a2edfbfa9b412d88cde6abe5178aae" rel="noreferrer">Open in iCloud</a>. <a id="add-refresh-shortcut" href="Mirics%20Refresh.shortcut" download="Mirics Refresh.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
       <details><summary>If the shortcut does not open</summary><p>If you used the file download instead, open <strong>Files → Downloads → Mirics Refresh.shortcut</strong>. If an app action is unavailable, open LocalDevVPN, Mirics, and SideStore once, then try again. Use LocalDevVPN 1.3.0 or later.</p></details>
+      <details id="cellular-updates"><summary>Update using cellular data · optional</summary>
+        <p>Experimental. Skip this if you use Wi-Fi. Your SideStore version must include <strong>Cellular Refresh</strong>.</p>
+        <ol class="instructions" role="list">
+          <li>Tap <strong>Add TurnOnData</strong> below. In Shortcuts, tap <strong>Add Shortcut</strong> or <strong>Replace</strong>.</li>
+          <li>Return here and add <strong>TurnOffData</strong> the same way. Keep both names exactly as shown.</li>
+          <li>Open <strong>SideStore → Settings → Experimental Features</strong> and turn <strong>Cellular Refresh</strong> on. Some versions place it under <strong>User Customizations</strong>.</li>
+          <li>Keep both helpers installed. SideStore calls them to briefly turn cellular data off during the transfer, turn it back on, and return to SideStore.</li>
+          <li>With cellular data and LocalDevVPN on, run <strong>Mirics Refresh</strong> while your iPhone is unlocked. Check that it finishes, cellular data is on, and LocalDevVPN is off.</li>
+        </ol>
+        <div class="actions" data-for="iphone"><a class="button" href="shortcuts://shortcuts/a10343e03dd946d88f9ec4ca303331d0">Add TurnOnData</a><a class="button" href="shortcuts://shortcuts/d6f2343607f448c68ca210f8a2fd7b0a">Add TurnOffData</a></div>
+        <p class="small">Direct links did not open? <a href="https://www.icloud.com/shortcuts/a10343e03dd946d88f9ec4ca303331d0" rel="noreferrer">TurnOnData in iCloud</a> · <a href="https://www.icloud.com/shortcuts/d6f2343607f448c68ca210f8a2fd7b0a" rel="noreferrer">TurnOffData in iCloud</a>.</p>
+        <p class="small">Or download the signed files: <a href="TurnOnData.shortcut" download="TurnOnData.shortcut">TurnOnData.shortcut</a> · <a href="TurnOffData.shortcut" download="TurnOffData.shortcut">TurnOffData.shortcut</a>. Open each download in Files, then finish adding it in Shortcuts.</p>
+        <p>No action editing or extra automation is needed. Adding the helpers does not enable the SideStore setting or prove that cellular installation works.</p>
+        <p class="note">If a transfer fails, turn cellular data back on and disconnect LocalDevVPN yourself. For comparison, retry on Wi-Fi with Cellular Refresh off. Some SideStore versions report a transfer failure as “app could not be found.” Do not delete Mirics to fix that message.</p>
+        <p class="small"><a href="https://github.com/SideStore/SideStore/issues/1505" rel="noreferrer">SideStore’s cellular setup instructions</a></p>
+      </details>
       <details><summary>What the shortcut does</summary><p class="flow">Enable LocalDevVPN
 Wait
 Get Mirics update (verified file)
@@ -325,7 +341,7 @@ Disable LocalDevVPN</p><p>Leave <strong>Auto-update</strong> on in Mirics to che
     <section class="step" data-step="15" aria-labelledby="heading-15" hidden>
       <p class="eyebrow">In Apple’s Shortcuts app</p><h2 id="heading-15" tabindex="-1">Test the refresh</h2>
       <ol class="instructions" role="list">
-        <li>Keep your iPhone unlocked and connected to <strong>Wi-Fi</strong>.</li>
+        <li>Keep your iPhone unlocked. Connect to <strong>Wi-Fi</strong>, or finish the optional cellular setup on the previous page.</li>
         <li>Run <strong>Mirics Refresh</strong> from Shortcuts.</li>
         <li>Allow its LocalDevVPN, Mirics, and SideStore actions when asked.</li>
         <li>Wait for the shortcut to finish.</li>
