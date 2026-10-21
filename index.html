@@ -302,17 +302,17 @@
 
     <section class="step" data-step="14" aria-labelledby="heading-14" hidden>
       <p class="eyebrow">On your iPhone</p><h2 id="heading-14" tabindex="-1">Add Mirics Refresh</h2>
-      <p>This is the only saved shortcut needed for normal Mirics setup. Install Mirics build 33 or later first. This shortcut includes Mirics updates, stable SideStore updates, signing refresh, and the VPN controls. Cellular installation still depends on SideStore and LocalDevVPN.</p>
+      <p>This is the only saved shortcut needed for normal Mirics setup. Install the latest Mirics first. This shortcut includes Mirics updates, stable SideStore updates, signing refresh, and VPN controls. Build 34 or later tries to detect SideStore’s version automatically. If you already use the complete build 33 shortcut, keep it. Cellular installation still depends on SideStore and LocalDevVPN.</p>
       <ol class="instructions" role="list">
         <li>Tap <strong>Add Mirics Refresh</strong> below.</li>
         <li>In Shortcuts, tap <strong>Add Shortcut</strong> or <strong>Replace</strong>.</li>
         <li>Keep the name <strong>Mirics Refresh</strong>.</li>
-        <li>For automatic SideStore updates, open <strong>Mirics → App updates → SideStore updates</strong>. Copy the current <strong>Version</strong> from <strong>SideStore → Settings</strong> and save it once.</li>
+        <li>Mirics checks SideStore’s version automatically when iOS permits. To check the result, open <strong>Mirics → App updates → SideStore updates</strong>. If detection is unavailable, expand <strong>Enter version manually</strong> and save Version from SideStore → Settings once.</li>
         <li>Replace the old shortcut once. Keep your existing daily automation, then continue to the next page to test.</li>
       </ol>
       <div class="actions" data-for="iphone"><a class="button" href="shortcuts://shortcuts/29c4e1b877214c559972d4727ff734a5">Add Mirics Refresh</a></div>
       <p class="small" data-for="iphone">Direct link didn’t open? <a href="https://www.icloud.com/shortcuts/29c4e1b877214c559972d4727ff734a5" rel="noreferrer">Open in iCloud</a>. <a id="add-refresh-shortcut" href="Mirics%20Refresh.shortcut" download="Mirics Refresh.shortcut" rel="noreferrer">Download shortcut file instead</a>, then open it in Files.</p>
-      <p class="note">Only newer stable SideStore versions are installed. Alpha and nightly releases are skipped, including versions incorrectly marked stable on GitHub. If you already use a newer experimental version, it waits for a newer stable release. If you update SideStore manually, save its new Version in Mirics.</p>
+      <p class="note">Only newer stable SideStore versions are installed. Alpha and nightly releases are skipped, including versions incorrectly marked stable on GitHub. If you already use a newer experimental version, it waits for a newer stable release. Mirics checks the version again before a SideStore update. Its manual version fallback remains available if iOS restricts automatic lookup.</p>
       <details><summary>If the shortcut does not open</summary><p>If you used the file download instead, open <strong>Files → Downloads → Mirics Refresh.shortcut</strong>. If an app action is unavailable, open LocalDevVPN, Mirics, and SideStore once, then try again. Use LocalDevVPN 1.3.0 or later.</p></details>
       <details id="cellular-updates"><summary>Update using cellular data · optional</summary>
         <p>Experimental. Skip this if you use Wi-Fi. Your SideStore version must include <strong>Cellular Refresh</strong>.</p>
